@@ -1,0 +1,64 @@
+.PeoplePagination {
+	position: fixed;
+	top: 43vh;
+	left: $GLOBAL_PADDING;
+	display: none;
+
+	.item {
+		font-size: 12px;
+		color: $COLOR_GREY;
+		margin-bottom: 16px;
+		cursor: pointer;
+		user-select: none;
+		/*	transform: translate3d(0px, 0px, 0px);
+		transition: 0.3s $ease-out-quad;
+		transition-property: margin-bottom, transform, color;*/
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		&:before {
+			background-color: black;
+			display: inline-block;
+			content: '';
+			width: 5px;
+			height: 5px;
+			transition: 0.3s $ease-out-quad transform, margin-right;
+			transform: scale(0) translate3d(-5px, -1px, 0px);
+			transform-origin: 50% 50%;
+		}
+
+		&.active {
+			color: black;
+			/*	margin-bottom: 36px;
+			transform: translate3d(10px, 0px, 0px);
+			transition: 0.3s $ease-out-quad;
+			transition-property: margin-bottom, transform, color;*/
+
+			&:before {
+				transition: 0.3s $ease-out-quad transform;
+				transform: scale(1) translate3d(-5px, -1px, 0px);
+				transform-origin: 50% 50%;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}
+
+body.nightshift {
+	.PeoplePagination {
+		.item {
+			&.active {
+				color: white;
+			}
+
+			&:before {
+				background-color: white;
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.Intro {
+	//opacity: 0;
+
+	pointer-events: none;
+	//background-color: black;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 99999;
+	//opacity: 0.5;
+
+	.bg {
+		z-index: 0;
+		position: absolute;
+		background-color: black;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.logoPlaceholder {
+		opacity: 0;
+		z-index: 1;
+		position: absolute;
+		top: calc(50% - 47px);
+		left: calc(50% - 42px - 20px);
+
+		svg {
+			width: 42px;
+			height: 24px;
+
+			.stroke {
+				fill: none;
+				stroke-miterlimit: 10;
+				//	stroke-width: 21px; // 19.63px;
+				stroke: white;
+			}
+
+			.letter-i {
+				fill: white;
+			}
+		}
+	}
+
+	.letters {
+		z-index: 1;
+		position: absolute;
+		top: calc(50% - 3px - 47px);
+		left: calc(50% + 7px - 20px);
+		pointer-events: none;
+
+		.letter {
+			opacity: 0;
+			display: inline-block;
+			color: white;
+			font-size: 28px;
+		}
+
+		.letter.lastLetter {
+			transform: translate(-21px, 0);
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+		.logoPlaceholder {
+			opacity: 0;
+			z-index: 1;
+			position: absolute;
+			top: calc(50% - 7px);
+			left: calc(50% - 42px - 20px);
+		}
+
+		.letters {
+			z-index: 1;
+			position: absolute;
+			top: calc(50% - 3px - 7px);
+			left: calc(50% + 7px - 20px);
+			pointer-events: none;
+		}
+	}
+}

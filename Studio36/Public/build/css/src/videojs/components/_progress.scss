@@ -1,0 +1,114 @@
+// .vjs-progress-control / ProgressControl
+//
+// This is the container for all progress bar-related components/elements.
+.video-js .vjs-progress-control {
+	cursor: pointer;
+	@include flex(auto);
+	@include display-flex(center);
+	min-width: 4em;
+	touch-action: none;
+	position: absolute;
+	left: 80px;
+	width: calc(100% - 200px);
+	right: 120px;
+	bottom: 0px;
+}
+
+.video-js .vjs-progress-control.disabled {
+	cursor: default;
+}
+
+.vjs-live .vjs-progress-control {
+	display: none;
+}
+
+.vjs-no-flex .vjs-progress-control {
+	width: auto;
+}
+
+// .vjs-progress-holder / SeekBar
+//
+// Box containing play and load progress bars. It also acts as seek scrubber.
+.video-js .vjs-progress-holder {
+	@include flex(auto);
+	@include transition(all 0.2s);
+	height: 4px;
+	border-radius: 2px;
+}
+
+.video-js .vjs-progress-control .vjs-progress-holder {
+	// This is one of the rare cases where we are using a pixel dimension. The
+	// reason is that the progress holder font-size changes on hover. With the
+	// default em-based margins, this means it gets narrower and causes issues
+	// with mouseover behaviors/math.
+	margin: 0 10px;
+}
+
+// This increases the size of the progress holder so there is an increased
+// hit area for clicks/touches.
+.video-js .vjs-progress-control:hover .vjs-play-progress {
+	// Progress handle
+	&:before {
+		transform: scale(1.5);
+	}
+}
+
+// .vjs-play-progress / PlayProgressBar and .vjs-load-progress / LoadProgressBar
+//
+// These are bars that appear within the progress control to communicate the
+// amount of media that has played back and the amount of media that has
+// loaded, respectively.
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+	position: absolute;
+	display: block;
+	height: 4px;
+	border-radius: 2px;
+	margin: 0;
+	padding: 0;
+	// updated by javascript during playback
+	width: 0;
+}
+
+.video-js .vjs-play-progress {
+	background-color: $primary-foreground-color;
+	@extend .vjs-icon-circle;
+
+	// Progress handle
+	&:before {
+		transition: transform 0.2s;
+		will-change: transform;
+		height: 8px;
+		width: 8px;
+		position: absolute;
+		right: -4px;
+		top: -3px;
+		z-index: 1;
+	}
+}
+
+.video-js .vjs-load-progress {
+	border-radius: 2px;
+	background: rgba(#ffffff, 0.4);
+}
+
+// There are child elements of the load progress bar that represent the
+// specific time ranges that have been buffered.
+.video-js .vjs-load-progress div {
+	border-radius: 2px;
+	background: rgba(#ffffff, 0.4);
+}
+
+// .vjs-time-tooltip
+//
+// These elements are displayed above the progress bar.
+//
+// By default, they are hidden and only shown when hovering over the progress
+// control.
+.video-js .vjs-time-tooltip {
+	display: none;
+}
+.video-js .vjs-mouse-display {
+	display: none;
+}

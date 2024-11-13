@@ -1,0 +1,44 @@
+.container {
+	width: 100%;
+	//padding-left: 0;
+	//padding-right: 0;
+
+	padding-left: 20px;
+	padding-right: 20px;
+
+	.innerContainer {
+		//max-width: $MAX_WIDTH;
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+	}
+
+	.grid {
+		@extend .innerContainer;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	//@media (min-width: 769px) {
+	//	padding-left: 20px;
+	//	padding-right: 20px;
+	//}
+
+	@media (min-width: 1025px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+$GRID-0-5: 8.333333333%;
+$GRID-1: 7.246376812%;
+$GRID-1-5: 25%;
+$GRID-2: 14.49275362%;
+$GRID-3: 21.73913043%;
+$GRID-4: 28.57142857%;
+$GRID-5: 35.71428571%;
+$GRID-6: 42.85714286%;
+$GRID-8: 56.52173913%;
+$GRID-10: 71.07942974%;
+$GRID-12: 85.71428571%;
+$GRID-GUTTER: 1.449275362%;

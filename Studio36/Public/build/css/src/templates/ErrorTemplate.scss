@@ -1,0 +1,57 @@
+.ErrorTemplate {
+	min-height: 100vh;
+	padding-top: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.content {
+		margin: 0 auto;
+		width: 200px;
+
+		.status {
+			font-size: 22px;
+			line-height: 1;
+			margin: 0 0 55px 0;
+			text-align: center;
+
+			b {
+				font-weight: normal;
+			}
+
+			.zero {
+				margin-left: 13px;
+				margin-right: 13px;
+				background-color: black;
+				width: 13px;
+				height: 13px;
+				display: inline-block;
+				transform: translate3d(0px, -1px, 0px);
+			}
+
+			.zero.last {
+				margin-left: 4px;
+			}
+		}
+
+
+		.info {
+			text-align: center;
+			font-size: 12px;
+			line-height: 1;
+			color: $COLOR_GREY;
+			text-transform: uppercase;
+		}
+	}
+
+}
+
+body.nightshift {
+	.ErrorTemplate {
+		.content {
+			.status {
+				color: white;
+			}
+		}
+	}
+}

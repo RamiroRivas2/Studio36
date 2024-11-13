@@ -1,0 +1,87 @@
+.EthicalTemplate {
+	cursor: auto;
+
+	p {
+		margin: 20px 0;
+	}
+
+	p,h2,h3,form {
+		max-width: 970px;
+
+		@media (min-width: $BREAKPOINT_MOBILE_BIG) {
+			margin-left: $GRID-1;
+			margin-right: 85px;
+		}
+	}
+
+	h2 {
+		color: #afafaf;
+		font-weight: 700;
+		font-size: 18px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
+	h3 {
+		color: #000000;
+		font-weight: 700;
+	}
+
+	form {
+		margin-top: 50px;
+
+		h2, .input-error {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.field {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			margin-bottom: 18px;
+
+			input,textarea {
+				padding: 10px;
+				font-size: 16px;
+				font-family: Arial, Helvetica, sans-serif;
+				border: 1px solid #000000;
+			}
+
+			textarea {
+				min-height: 150px;
+			}
+
+			.input-error {
+				color: #ff0000;
+				font-size: 14px;
+			}
+		}
+
+		button {
+			background-color: #000000;
+			color: #ffffff;
+			padding: 10px 20px;
+			font-size: 14px;
+			font-family: Arial, Helvetica, sans-serif;
+			border: none;
+			text-transform: uppercase;
+		}
+	}
+
+	#form-success {
+		display: none;
+		max-width: 970px;
+		margin-top: 30px;
+		
+		@media (min-width: $BREAKPOINT_MOBILE_BIG) {
+			margin-left: $GRID-1;
+			margin-right: 85px;
+		}
+	}
+
+	.input-error {
+		display: none;
+	}
+}

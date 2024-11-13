@@ -1,0 +1,139 @@
+.CareersTemplate {
+	cursor: auto;
+	font-size: 16px;
+
+	a {
+		text-decoration: none;
+	}
+	.intro {
+		margin-top: 30px;
+		margin-bottom: 0px;
+
+		.title {
+			margin-left: 0;
+			margin-top: 0;
+			margin-bottom: 40px;
+			width: 100%;
+			transform: translate3d(-2px, 0, 0);
+		}
+	}
+
+	.column1 {
+		margin-bottom: 20px;
+	}
+
+	.column1, .column2 {
+		width: 100%;
+		margin-bottom: 20px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+		.column1 {
+			margin-bottom: 20px;
+		}
+
+		.intro {
+			//margin-bottom: 0;
+
+			.title {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_LANDSCAPE) {
+		.intro {
+			margin-top: 120px;
+			margin-bottom: 107px;
+
+			.title {
+				margin-left: 0;
+				margin-top: 0;
+				margin-bottom: 103px;
+				width: 100%;
+				transform: translate3d(-2px, 0, 0);
+			}
+		}
+	}
+
+
+
+
+	@media (min-width: 1105px) {
+
+		.headline {
+			width: 100%;
+		}
+
+		.column1 {
+			margin-left: $GRID-1;
+			margin-right: 30px;
+		}
+
+		.column1, .column2 {
+			width: 400px;
+		}
+
+		.intro {
+			.title {
+				transform: translate3d(0, -12px, 0);
+				margin-left: $GRID-1;
+				width: 100%;
+			}
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_DESKTOP_SMALL) {
+		.headline {
+			width: 100%;
+		}
+
+		.column1 {
+			margin-left: $GRID-1;
+			width: 500px;
+			margin-right: 30px;
+		}
+
+		.column2 {
+			width: 500px;
+			margin-right: 0px;
+		}
+
+		.intro {
+			.title {
+				transform: translate3d(0, -16px, 0);
+				width: 100%;
+				margin-bottom: 60px;
+			}
+		}
+	}
+
+	@media (min-width: 1760px) {
+		.column1 {
+			margin-left: 0px;
+			width: 520px;
+			margin-right: 0px;
+		}
+
+		.column2 {
+			width: 520px;
+			margin-right: 0px;
+			margin-left: 10px;
+		}
+
+		.headline {
+			width: 520px;
+		}
+
+		.intro {
+			.title {
+				transform: translate3d(0, -16px, 0);
+				width: 527px;
+			}
+		}
+	}
+}

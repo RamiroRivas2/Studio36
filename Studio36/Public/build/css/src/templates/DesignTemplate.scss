@@ -1,0 +1,102 @@
+.DesignTemplate {
+	cursor: auto;
+
+	.intro {
+		margin-bottom: 65px;
+	}
+
+	.introHeadline {
+		width: 100%;
+		font-size: 18px;
+		line-height: 1.2857142857;
+		margin-bottom: 40px;
+
+		line-height: 1.3125;
+		font-size: 16px;
+	}
+
+	.introBody {
+		width: 100%;
+
+		column-gap: 20px;
+		column-width: 1000px;
+		column-fill: auto; //balance;//auto; //balance;//auto;
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+
+		//line-height: 1.3125;
+		//font-size: 14px;
+		line-height: 1.3125;
+		font-size: 16px;
+	}
+
+	@media (min-width: 1105px) {
+		.intro {
+			margin-bottom: 120px;
+		}
+
+		.introHeadline {
+			width: 440px;
+			margin-left: $GRID-1;
+			margin-right: 85px;
+			margin-bottom: 0;
+			font-size: 21px;
+
+			font-size: 16px;
+			//margin-right: 20px;
+			//min-height: 400px;
+		}
+
+		.introBody {
+			width: 440px;
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: 1663px) {
+		.intro {
+			margin-bottom: 120px;
+		}
+
+		.introHeadline {
+			width: 440px;
+			margin-left: $GRID-1;
+			margin-right: 85px;
+			margin-bottom: 0;
+			font-size: 21px;
+
+			font-size: 16px;
+			//margin-right: 20px;
+			//min-height: 400px;
+		}
+
+		.introBody {
+			width: 440px;
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: 2237px) {
+		.intro {
+			margin-bottom: 120px;
+		}
+
+		.introHeadline {
+			width: 970px;
+			margin-left: $GRID-1;
+			margin-right: 85px;
+			margin-bottom: 0;
+			font-size: 21px;
+
+			font-size: 16px;
+			//margin-right: 20px;
+			//min-height: 400px;
+		}
+
+		.introBody {
+			width: 840px;
+			font-size: 16px;
+		}
+	}
+}

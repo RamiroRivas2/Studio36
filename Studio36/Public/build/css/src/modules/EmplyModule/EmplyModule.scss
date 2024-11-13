@@ -1,0 +1,439 @@
+.EmplyModule {
+	.headline {
+		font-size: 50px;
+		margin-bottom: 6px;
+		width: 100%;
+		transform: translate3d(-2px, 0, 0);
+	}
+
+	.column1 {
+		margin-bottom: 20px;
+	}
+
+	.column2 {
+		margin-bottom: 50px;
+
+		a {
+			color: black;
+			cursor: pointer;
+			margin-top: 20px;
+			display: inline-block;
+
+			.arrow {
+				margin-left: 7px;
+				display: inline;
+			}
+
+			&:after {
+				content: '';
+				width: 100%;
+				height: 1px;
+				background-color: black;
+				display: inline-block;
+				transform: translateY(-8px);
+			}
+		}
+	}
+
+	.column1,
+	.column2 {
+		width: 100%;
+	}
+
+	.spacer {
+		height: 80px;
+		width: 100%;
+		border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+		position: relative;
+	}
+
+	.sort {
+		margin-left: 0px;
+		font-size: 14px;
+		margin-bottom: 40px;
+
+		.option {
+			display: block;
+			.optionHeader {
+				margin-right: 10px;
+			}
+
+			select {
+				margin-top: 10px;
+				color: $COLOR_GREY;
+				margin-right: 20px;
+				outline: none;
+				border: none;
+				min-width: 200px;
+			}
+
+			input:focus,
+			textarea:focus,
+			select:focus {
+				outline: none;
+			}
+		}
+	}
+
+	.header {
+		display: flex;
+		font-size: 16px;
+		justify-content: space-between;
+		text-transform: uppercase;
+		padding-bottom: 18px;
+		border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+
+		.title {
+			display: none;
+			width: $GRID-5;
+		}
+
+		.area {
+			display: none;
+			width: $GRID-3;
+		}
+
+		.location {
+			display: none;
+			width: $GRID-2;
+		}
+
+		.deadline {
+			display: none;
+			width: $GRID-3;
+		}
+	}
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 190px;
+
+		.jobListing {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			min-height: 40px;
+			//border-top: 1px solid black;
+			border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+			padding-top: 13px;
+			padding-bottom: 13px;
+
+			font-size: 12px;
+			text-transform: uppercase;
+
+			.title {
+				width: 100%;
+				margin-bottom: 20px;
+				display: flex;
+				justify-content: space-between;
+				text-align: left;
+				//	font-weight: bold;
+
+				.content {
+					width: calc(100% - 70px);
+					display: inline-block;
+				}
+
+				.label {
+					width: 70px;
+					font-size: 9px;
+					color: $COLOR_GREY;
+					display: inline-block;
+					margin-right: 12px;
+				}
+			}
+
+			.area {
+				width: $GRID-3;
+			}
+
+			.location {
+				width: $GRID-2;
+			}
+
+			.deadline {
+				width: $GRID-3;
+			}
+
+			.condensed {
+				width: 100%;
+
+				.condensedItem {
+					margin-bottom: 10px;
+					display: flex;
+					justify-content: space-between;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+
+				.title {
+					display: inline;
+					font-size: 9px;
+					color: $COLOR_GREY;
+					margin-right: 12px;
+					width: 70px;
+					margin-bottom: 8px;
+				}
+
+				.value {
+					width: calc(100% - 70px);
+					display: inline;
+				}
+			}
+
+			.full {
+				display: none;
+			}
+		}
+
+		a {
+			width: 100%;
+			color: black;
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_MOBILE_BIG) {
+		.list {
+			.jobListing {
+				flex-wrap: nowrap;
+
+				.title {
+					width: $GRID-5;
+					margin-bottom: 0;
+
+					.label {
+						display: none;
+					}
+				}
+
+				.condensed {
+					width: $GRID-6;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+		margin-left: 0px;
+
+		.sort {
+			//margin-left: $GRID-1;
+			font-size: 14px;
+			margin-bottom: 40px;
+
+			.option {
+				display: inline-block;
+
+				.optionHeader {
+					margin-right: 10px;
+				}
+
+				select {
+					margin-top: 10px;
+					color: $COLOR_GREY;
+					margin-right: 20px;
+					outline: none;
+					border: none;
+					min-width: auto;
+				}
+
+				input:focus,
+				textarea:focus,
+				select:focus {
+					outline: none;
+				}
+			}
+		}
+
+		.column1 {
+			margin-bottom: 0;
+		}
+
+		.column1,
+		.column2 {
+			padding-right: $GRID-GUTTER;
+			width: $GRID_4;
+		}
+
+		.headline {
+			width: $GRID_6;
+			transform: translate3d(0, -12px, 0);
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_LANDSCAPE) {
+		margin-left: $GRID-1;
+		.header {
+			.title {
+				display: block;
+			}
+
+			.area {
+				display: block;
+			}
+
+			.location {
+				display: block;
+			}
+
+			.deadline {
+				display: block;
+			}
+		}
+
+		.condensed {
+			display: none;
+		}
+
+		.list {
+			.jobListing {
+				.full {
+					display: block;
+				}
+			}
+		}
+
+		.column1,
+		.column2 {
+			width: $GRID_3;
+		}
+
+		.headline {
+			transform: translate3d(0, -12px, 0);
+			//margin-left: $GRID-1;
+			width: $GRID_6;
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_DESKTOP_SMALL) {
+		.column1,
+		.column2 {
+			width: $GRID_2;
+		}
+
+		.headline {
+			transform: translate3d(0, -16px, 0);
+			width: $GRID_8;
+		}
+	}
+}
+
+body.nightshift {
+	.EmplyModule {
+		.column2 {
+			a {
+				color: white;
+
+				.arrow {
+					svg {
+						path {
+							stroke: white;
+						}
+					}
+				}
+
+				&:after {
+					background-color: white;
+				}
+			}
+		}
+
+		.spacer {
+			border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+		}
+
+		.header {
+			display: flex;
+			font-size: 16px;
+			justify-content: space-between;
+			text-transform: uppercase;
+			padding-bottom: 18px;
+			border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+
+			.title {
+				color: white;
+			}
+
+			.area {
+				color: white;
+			}
+
+			.location {
+				color: white;
+			}
+
+			.deadline {
+				color: white;
+			}
+		}
+
+		.list {
+			.jobListing {
+				border-bottom: 1px solid $COLOR_LIGHTER_GREY;
+
+				.title {
+					.label {
+						color: $COLOR_GREY;
+					}
+				}
+
+				.area {
+				}
+
+				.location {
+				}
+
+				.deadline {
+				}
+
+				.condensed {
+					width: 100%;
+
+					.title {
+						color: $COLOR_GREY;
+					}
+
+					.value {
+					}
+				}
+
+				.full {
+				}
+			}
+
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+body:not(.touch) {
+	.EmplyModule {
+		.list {
+			.jobListing {
+				transition: 0.2s;
+				transition-property: background-color;
+			}
+
+			.jobListing:hover {
+				transition: 0.2s;
+				transition-property: background-color;
+				background-color: #f3f3f3;
+			}
+		}
+	}
+}
+
+body.nightshift:not(.touch) {
+	.EmplyModule {
+		.list {
+			.jobListing:hover {
+				background-color: #1b1b1b;
+			}
+		}
+	}
+}

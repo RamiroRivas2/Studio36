@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 144 144">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: .5px;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #231f20;
+        stroke-miterlimit: 2;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        stroke-width: .25px;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_2">
+      <rect class="cls-1" x="0" y="0" width="144" height="144"/>
+    </g>
+    <g id="rectangle_2">
+      <rect class="cls-3" x="87.25" y="94.66" width="33.61" height="25.5" rx="1.7" ry="1.7"/>
+      <path class="cls-3" d="M30.76,25.8l2.04,92.32c0,1.13-.91,2.04-2.04,2.04h-5.5c-1.13,0-2.04-.91-2.04-2.04l1.64-92.32c0-1.13.91-2.04,2.04-2.04h1.81c1.13,0,2.04.91,2.04,2.04Z"/>
+      <rect class="cls-3" x="74.68" y="104.96" width="18.59" height="4.85" rx="1.55" ry="1.55" transform="translate(-23.41 191.36) rotate(-90)"/>
+      <rect class="cls-3" x="48.8" y="76.79" width="31.88" height="43.37" rx="1.53" ry="1.53"/>
+      <rect class="cls-2" x="90.67" y="98.09" width="26.76" height="18.59" rx="1.7" ry="1.7"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+.ImageGallery {
+	margin-bottom: 80px;
+
+	.images {
+		width: 100%;
+		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+
+		.content {
+			padding: 61.83206107% 0 0 0;
+		}
+
+		.imgContainer {
+			width: 100%;
+			display: inline-block;
+			margin: 0;
+			//height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.info {
+		margin-top: 13px;
+		width: 100%;
+		position: relative;
+
+		.count {
+			position: absolute;
+			right: 0;
+		}
+
+		.captions {
+			position: absolute;
+			left: 0;
+			width: 70%;
+
+			.caption {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 12px;
+
+				&:first-of-type {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+		.images {
+			margin-left: $GRID-1;
+			width: $GRID-12;
+		}
+
+		.info {
+			margin-left: $GRID-1;
+			width: $GRID-12;
+		}
+	}
+}

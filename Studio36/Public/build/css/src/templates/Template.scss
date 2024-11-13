@@ -1,0 +1,36 @@
+.template {
+	width: 100%;
+	padding-top: 60px;
+
+	h1 {
+		margin-top: 0px;
+		margin-bottom:60px;
+		font-size: 55px;
+	}
+
+
+	@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+		h1 {
+			margin-top: 60px;
+			margin-bottom: 60px;
+			font-size: 60px;
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_TABLET_LANDSCAPE) {
+		h1 {
+			margin-top: 60px;
+			margin-bottom: 60px;
+			margin-left: $GRID-1;
+			font-size: 70px;
+		}
+	}
+
+	@media (min-width: $BREAKPOINT_DESKTOP_SMALL) {
+		h1 {
+			margin-top: 60px;
+			margin-bottom: 60px;
+			font-size: 100px;
+		}
+	}
+}

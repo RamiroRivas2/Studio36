@@ -1,0 +1,232 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: $FONT_STANDARD;
+	vertical-align: baseline;
+
+	//text-rendering: auto;
+	//text-rendering: optimizeSpeed;
+	//text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	//height: calc(100vh - env(safe-area-inset-bottom)- env(safe-area-inset-top));
+
+	overflow-y: scroll; //hidden;//scroll;
+	overflow-x: clip;
+
+	background-color: $COLOR_WHITE;
+	color: $COLOR_BLACK;
+	//cursor: url('/assets/svg/cursors/cursor_default.svg'), default;
+
+	&.disable {
+		//height: 100%;
+		//overflow: hidden;
+	}
+
+	&.nightshift {
+		background-color: black;
+		color: $COLOR_WHITE;
+	}
+}
+
+body.busy {
+	cursor: progress !important;
+
+	* {
+		cursor: progress !important;
+	}
+}
+
+* {
+	box-sizing: border-box;
+
+	//&::selection {
+	//	color: $COLOR_BLACK;
+	//	background: $COLOR_GREEN;
+	//}
+}
+
+sup {
+	line-height: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	//line-height: 1.2;
+	//
+	//@media (min-width: $BREAKPOINT_TABLET_LANDSCAPE) {
+	//	font-size: 40px;
+	//}
+}
+
+//p {
+//	font-weight: 400;
+//}
+
+a,
+a:visited,
+a:active,
+a:hover {
+	//color: $COLOR_WHITE;
+	color: inherit;
+	text-decoration: underline;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+}
+
+#TemplateLayer {
+	width: 100%;
+	overflow: hidden;
+}
+
+img {
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+
+	&.lazyloaded {
+		transition: 0.5s opacity;
+		opacity: 1;
+	}
+}
+
+#SiteWrapper {
+	width: 100%;
+	//overflow: hidden;
+	position: relative;
+	//opacity: 0;
+
+	/*width: unset;
+		overflow: unset;
+		min-height: unset;
+		position: unset;
+		height: 100%;
+	background-color: red;*/
+}
+
+.imageContainer {
+	width: 100%;
+	position: relative;
+}
+
+.centerMarkerHorizontal {
+	display: none;
+	pointer-events: none;
+	user-select: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 1px;
+	left: 0;
+	top: calc(50vh + 30px);
+	background-color: palevioletred;
+}
+
+.centerMarkerVertical {
+	display: none;
+	pointer-events: none;
+	user-select: none;
+	position: fixed;
+	z-index: 999;
+	width: 1px;
+	height: 100vh;
+	left: 50vw;
+	top: 0;
+	background-color: palevioletred;
+}

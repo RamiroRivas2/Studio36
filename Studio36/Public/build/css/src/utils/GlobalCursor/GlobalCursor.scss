@@ -1,0 +1,79 @@
+#GlobalCursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	pointer-events: none;
+	//cursor: none;
+
+	.default {
+		display: none;
+		position: absolute;
+		top: -15px;
+		left: -15px;
+
+		img {
+			opacity: 1;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	.arrowBig {
+		display: none;
+		position: absolute;
+		top: -15px;
+		left: -15px;
+
+		img {
+			opacity: 1;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	.arrowBig.arrow_right_white {
+		left: -5px;
+	}
+
+	.arrowBig.arrow_left_white {
+		left: -30px;
+	}
+
+	.arrowSmall {
+		display: none;
+		position: absolute;
+		top: -11px;
+		left: -11px;
+
+		img {
+			opacity: 1;
+			width: 22px;
+			height: 22px;
+		}
+	}
+
+	.pause {
+		display: none;
+		position: absolute;
+		top: -7px;
+		left: -8px;
+		img {
+			width: 16px;
+			height: 14.722px;
+			opacity: 1;
+		}
+	}
+
+	.play {
+		display: none;
+		position: absolute;
+		top: -7px;
+		left: -8px;
+		img {
+			width: 16px;
+			height: 14.22px;
+			opacity: 1;
+		}
+	}
+}

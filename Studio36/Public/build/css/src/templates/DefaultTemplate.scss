@@ -1,0 +1,97 @@
+.DefaultTemplate{
+	//background-color: palevioletred;
+	//padding-top: 60px;
+	margin-bottom: -150px;
+
+	.progressIndicator {
+		position: fixed;
+		bottom: 0px;
+		width: 100vw;
+		height: 3px;
+		background-color: #101010;
+	}
+
+	.leftOverlay {
+		position: fixed;
+		width: 20vw;
+		height: 100vh;
+		//background-color: #f00;
+		opacity: 0;
+		z-index: 100000;
+		cursor: pointer;
+		pointer-events: none;
+
+		.arrow {
+			user-select: none;
+			//opacity: 0;
+			position: absolute;
+			font-size:12px;
+			left: 32px;
+			top: 60px;
+			pointer-events: none;
+
+			svg {
+				width: 15px;
+				height: 14px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.rightOverlay {
+		pointer-events: none;
+		position: fixed;
+		width: 20vw;
+		height: 100vh;
+		//background-color: #f00;
+		opacity: 0;
+		right: 0px;
+		z-index: 100000;
+		cursor: pointer;
+
+		.arrow {
+			user-select: none;
+			//opacity: 0;
+			font-size:12px;
+			position: absolute;
+			right: 32px;
+			top: 60px;
+			pointer-events: none;
+
+			svg {
+				width: 15px;
+				height: 14px;
+			}
+		}
+	}
+}
+
+@media (min-width: $BREAKPOINT_TABLET_PORTRAIT) {
+	.leftOverlay {
+		pointer-events: auto;
+	}
+	.rightOverlay {
+		pointer-events: auto;
+	}
+}
+
+body.nightshift {
+	.leftOverlay {
+		//background-color: #000000;
+		.arrow {
+			color: #ffffff;
+
+		}
+
+	}
+
+	.rightOverlay {
+
+		.arrow {
+			color: #ffffff;
+		}
+
+		//background-color: #000000;
+
+	}
+}

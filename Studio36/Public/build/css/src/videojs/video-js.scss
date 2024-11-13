@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'private-variables';
+@import 'utilities';
+@import '../../../node_modules/videojs-font/scss/icons';
+@import 'components/layout';
+@import 'components/big-play';
+@import 'components/button';
+@import 'components/close-button';
+@import 'components/modal-dialog';
+@import 'components/menu/menu';
+@import 'components/menu/menu-popup';
+@import 'components/menu/menu-inline';
+@import 'components/control-bar';
+@import 'components/control';
+@import 'components/control-spacer';
+@import 'components/progress';
+@import 'components/slider';
+//@import 'components/volume';
+@import 'components/poster';
+@import 'components/live';
+@import 'components/time';
+@import 'components/play-pause';
+@import 'components/text-track';
+@import 'components/fullscreen';
+@import 'components/error';
+@import 'components/loading';
+//@import 'components/chapters';
+@import 'components/descriptions';
+//@import 'components/audio';
+@import 'components/adaptive';
+@import 'print';
+@import 'components/captions';
+@import 'components/subtitles';
+@import 'components/subs-caps';
+@import 'components/captions-settings';
+.vjs-resize-manager {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	z-index: -1000;
+}
+
+// The rule is needed for :focus-visible polyfill
+.js-focus-visible .video-js *:focus:not(.focus-visible) {
+	outline: none;
+}
+
+.video-js *:focus:not(:focus-visible) {
+	outline: none;
+}
+
+.video-js .vjs-volume-panel {
+	display: none;
+}
+.video-js .vjs-subs-caps-button {
+	margin-right: 10px;
+}
+.video-js .vjs-duration {
+	margin-right: auto;
+}
+//
+//.video-js .vjs-text-track-display {
+//	display: none;
+//}
+
+.video-js {
+	video::-webkit-media-controls-panel-container {
+		display: none !important;
+	}
+}
+
+.vjs-icon-play:before {
+	content: '';
+	background: url("data:image/svg+xml,%3Csvg width='16' height='17' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 8.5L1 1v15z' fill='%23000' stroke='%23000' stroke-width='2' fill-rule='evenodd' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+		no-repeat 14px center;
+	background-size: 14px 15px;
+}
+
+.vjs-icon-pause:before {
+	content: '';
+	background: url("data:image/svg+xml,%3Csvg width='8' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23191919' fill-rule='evenodd'%3E%3Crect transform='rotate(90 1 8)' x='-7' y='7' width='16' height='2' rx='1'/%3E%3Crect transform='rotate(90 7 8)' x='-1' y='7' width='16' height='2' rx='1'/%3E%3C/g%3E%3C/svg%3E")
+		no-repeat center center;
+	background-size: 8px 16px;
+}
+
+.vjs-icon-fullscreen-enter:before {
+	content: '';
+	background: url("data:image/svg+xml,%3Csvg width='17' height='17' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23231F20' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 5V1h4M5 16H1v-4M16 12v4h-4M12 1h4v4'/%3E%3C/g%3E%3C/svg%3E")
+		no-repeat center center;
+}
+
+.vjs-icon-fullscreen-exit:before {
+	content: '';
+	background: url("data:image/svg+xml,%3Csvg width='17' height='17' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23231F20' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 1v4H1M1 12h4v4M12 16v-4h4M16 5h-4V1'/%3E%3C/g%3E%3C/svg%3E")
+		no-repeat center center;
+}
+
+button.vjs-play-control,
+button.vjs-fullscreen-control {
+	transition: transform 0.2s;
+	will-change: transform;
+	&:hover {
+		transform: scale(1.08);
+	}
+}
