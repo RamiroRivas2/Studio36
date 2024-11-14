@@ -1,28 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const projectId = new URLSearchParams(window.location.search).get('id');
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('id');
 
-    fetch(`/api/project/${projectId}`)
-        .then(response => {
-            if (!response.ok) throw new Error('Project not found');
-            return response.json();
+    fetch('/api/projects')
+        .then(response => response.json())
+        .then(projects => {
+            const project = projects.find(proj => proj.id == projectId);
+            if (project) {
+                const projectDetails = document.getElementById('project-details');
+                projectDetails.innerHTML = `
+          <h1>${project.title}</h1>
+          <p><strong>Location:</strong> ${project.location}</p>
+          <p><strong>Year:</strong> ${project.year}</p>
+          <p><strong>Client:</strong> ${project.client}</p>
+          <p>${project.description}</p>
+          <img src="${project.image}" alt="${project.title}">
+        `;
+            } else {
+                projectDetails.innerHTML = '<p>Project not found.</p>';
+            }
         })
-        .then(project => {
-            document.getElementById('projectTitle').innerText = project.title;
-            document.getElementById('projectLocation').innerText = project.location;
-            document.getElementById('projectYear').innerText = project.year;
-            document.getElementById('projectClient').innerText = project.client;
-            document.getElementById('projectTypology').innerText = project.typology;
-            document.getElementById('projectSize').innerText = project.size;
-            document.getElementById('projectStatus').innerText = project.status;
-            document.getElementById('projectDescription').innerText = project.description;
-            document.getElementById('projectImage').src = project.image;
-        })
-        .catch(error => {
-            document.getElementById('projectDetails').innerHTML = `<p>${error.message}</p>`;
-        });
-
-    // Back to projects button
-    document.getElementById('backButton').addEventListener('click', () => {
-        window.history.back();
-    });
+        .catch(err => console.error('Error loading project details:', err));
 });

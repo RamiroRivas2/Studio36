@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Suzhou Museum of Contemporary Art",
+    "location": "Suzhou, China",
+    "year": 2024,
+    "client": "Suzhou Harmony Development Group",
+    "description": "A reimagined traditional garden featuring 12 pavilions.",
+    "image": "images/sample1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "NOT A HOTEL Setouchi",
+    "location": "Sagi Island, Japan",
+    "year": 2023,
+    "client": "Private Client",
+    "description": "A serene escape merging nature with architectural elements.",
+    "image": "images/sample2.jpg"
+  }
+]

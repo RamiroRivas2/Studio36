@@ -10,7 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.9",

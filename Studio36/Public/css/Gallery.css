@@ -1,0 +1,23 @@
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+    }
